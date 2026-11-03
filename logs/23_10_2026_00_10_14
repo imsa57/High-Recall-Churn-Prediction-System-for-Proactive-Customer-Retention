@@ -1,0 +1,45 @@
+[ 2026-10-23 00:10:25,370 ] 138 src.logger - INFO - making final data set from raw data.
+[ 2026-10-23 00:10:25,370 ] 39 src.logger - INFO - Loading data from data\raw\Telco-Customer-Churn.csv
+[ 2026-10-23 00:10:25,425 ] 41 src.logger - INFO - Data loaded sucessfully. shape (7043, 22)
+[ 2026-10-23 00:10:25,426 ] 64 src.logger - INFO - No missing columns found
+[ 2026-10-23 00:10:25,426 ] 73 src.logger - INFO - Some extra columns found.. ['Unnamed: 0', 'customerID', 'gender', 'PhoneService', 'MultipleLines', 'TechSupport', 'StreamingTV', 'TotalCharges']
+[ 2026-10-23 00:10:25,431 ] 96 src.logger - INFO - Data type checking start...
+[ 2026-10-23 00:10:25,433 ] 104 src.logger - INFO - Data type checking Done!
+[ 2026-10-23 00:10:25,442 ] 107 src.logger - INFO - Checking Duplicate value : Found 58 duplicate value.
+[ 2026-10-23 00:10:25,459 ] 110 src.logger - INFO - Cheking null value : Found 0 null value.
+[ 2026-10-23 00:10:25,459 ] 119 src.logger - INFO - Splitting data into test_size=0.2, random_state=42
+[ 2026-10-23 00:10:25,569 ] 126 src.logger - INFO - Splitting done --> train_set:(5588, 13), test_set: (1397, 13)
+[ 2026-10-23 00:10:25,570 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:10:25,719 ] 138 src.logger - INFO - making final data set from raw data.
+[ 2026-10-23 00:10:25,720 ] 39 src.logger - INFO - Loading data from data\raw\Telco-Customer-Churn.csv
+[ 2026-10-23 00:10:25,761 ] 41 src.logger - INFO - Data loaded sucessfully. shape (7043, 22)
+[ 2026-10-23 00:10:25,761 ] 64 src.logger - INFO - No missing columns found
+[ 2026-10-23 00:10:25,761 ] 73 src.logger - INFO - Some extra columns found.. ['Unnamed: 0', 'customerID', 'gender', 'PhoneService', 'MultipleLines', 'TechSupport', 'StreamingTV', 'TotalCharges']
+[ 2026-10-23 00:10:25,765 ] 96 src.logger - INFO - Data type checking start...
+[ 2026-10-23 00:10:25,766 ] 104 src.logger - INFO - Data type checking Done!
+[ 2026-10-23 00:10:25,777 ] 107 src.logger - INFO - Checking Duplicate value : Found 58 duplicate value.
+[ 2026-10-23 00:10:25,788 ] 110 src.logger - INFO - Cheking null value : Found 0 null value.
+[ 2026-10-23 00:10:25,788 ] 119 src.logger - INFO - Splitting data into test_size=0.2, random_state=42
+[ 2026-10-23 00:10:25,801 ] 126 src.logger - INFO - Splitting done --> train_set:(5588, 13), test_set: (1397, 13)
+[ 2026-10-23 00:10:28,008 ] 187 src.logger - INFO - Starting training of all models...
+[ 2026-10-23 00:10:28,014 ] 82 src.logger - INFO - Training LogisticRegression..........
+[ 2026-10-23 00:10:28,015 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:10:37,490 ] 151 src.logger - INFO - logisticregression training completed. Test PR_AUC: 0.6062
+[ 2026-10-23 00:10:39,989 ] 82 src.logger - INFO - Training RandomForest..........
+[ 2026-10-23 00:10:39,989 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:10:50,281 ] 151 src.logger - INFO - randomforestclassifier training completed. Test PR_AUC: 0.6335
+[ 2026-10-23 00:10:53,524 ] 82 src.logger - INFO - Training XGBoost..........
+[ 2026-10-23 00:10:53,524 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:10:57,318 ] 151 src.logger - INFO - xgbclassifier training completed. Test PR_AUC: 0.6284
+[ 2026-10-23 00:12:03,916 ] 270 src.logger - INFO - Best model selected: name         randomforestclassifier
+recall                        0.902
+precision                     0.479
+threshold                     0.402
+Name: 1, dtype: object
+[ 2026-10-23 00:12:04,088 ] 318 src.logger - INFO - Model saved to models\randomforestclassifier_23-10-2026_00-10\randomforestclassifier_23-10-2026_00-10.pkl
+[ 2026-10-23 00:12:04,121 ] 352 src.logger - INFO - Reference profile saved to models\reference_profile.json
+[ 2026-10-23 00:12:04,122 ] 210 src.logger - INFO - Training completed. Best model: randomforestclassifier
+[ 2026-10-23 00:12:13,561 ] 116 src.logger - INFO - Prediction started:       MonthlyCharges  tenure  Contract  ...     DeviceProtection      StreamingMovies PaperlessBilling
+3173           19.35      17  One year  ...  No internet service  No internet service               No
+
+[1 rows x 13 columns]

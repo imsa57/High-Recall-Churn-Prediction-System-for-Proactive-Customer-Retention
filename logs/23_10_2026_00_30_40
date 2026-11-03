@@ -1,0 +1,8 @@
+[ 2026-10-23 00:30:48,498 ] 27 src.logger - INFO - Starting Prediction API server.......
+[ 2026-10-23 00:30:48,500 ] 11 src.logger - INFO - Model found for predicton.
+[ 2026-10-23 00:31:02,669 ] 118 src.logger - INFO - Prediction started:    MonthlyCharges  tenure        Contract  ... DeviceProtection StreamingMovies PaperlessBilling
+0            20.0       2  Month-to-month  ...               No              No              Yes
+
+[1 rows x 13 columns]
+[ 2026-10-23 00:31:02,886 ] 55 src.logger - INFO - Buffered inference sample (buffer size: 1)
+[ 2026-10-23 00:32:07,368 ] 31 src.logger - INFO - Shutting down churn prediction service...

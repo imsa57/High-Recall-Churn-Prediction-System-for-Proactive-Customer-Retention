@@ -1,0 +1,46 @@
+[ 2026-10-23 00:35:59,926 ] 138 src.logger - INFO - making final data set from raw data.
+[ 2026-10-23 00:35:59,927 ] 39 src.logger - INFO - Loading data from data\raw\Telco-Customer-Churn.csv
+[ 2026-10-23 00:35:59,981 ] 41 src.logger - INFO - Data loaded sucessfully. shape (7043, 22)
+[ 2026-10-23 00:35:59,982 ] 64 src.logger - INFO - No missing columns found
+[ 2026-10-23 00:35:59,982 ] 73 src.logger - INFO - Some extra columns found.. ['Unnamed: 0', 'customerID', 'gender', 'PhoneService', 'MultipleLines', 'TechSupport', 'StreamingTV', 'TotalCharges']
+[ 2026-10-23 00:35:59,987 ] 96 src.logger - INFO - Data type checking start...
+[ 2026-10-23 00:35:59,988 ] 104 src.logger - INFO - Data type checking Done!
+[ 2026-10-23 00:35:59,997 ] 107 src.logger - INFO - Checking Duplicate value : Found 58 duplicate value.
+[ 2026-10-23 00:36:00,014 ] 110 src.logger - INFO - Cheking null value : Found 0 null value.
+[ 2026-10-23 00:36:00,014 ] 119 src.logger - INFO - Splitting data into test_size=0.2, random_state=42
+[ 2026-10-23 00:36:00,119 ] 126 src.logger - INFO - Splitting done --> train_set:(5588, 13), test_set: (1397, 13)
+[ 2026-10-23 00:36:00,119 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:36:00,288 ] 138 src.logger - INFO - making final data set from raw data.
+[ 2026-10-23 00:36:00,288 ] 39 src.logger - INFO - Loading data from data\raw\Telco-Customer-Churn.csv
+[ 2026-10-23 00:36:00,332 ] 41 src.logger - INFO - Data loaded sucessfully. shape (7043, 22)
+[ 2026-10-23 00:36:00,333 ] 64 src.logger - INFO - No missing columns found
+[ 2026-10-23 00:36:00,333 ] 73 src.logger - INFO - Some extra columns found.. ['Unnamed: 0', 'customerID', 'gender', 'PhoneService', 'MultipleLines', 'TechSupport', 'StreamingTV', 'TotalCharges']
+[ 2026-10-23 00:36:00,337 ] 96 src.logger - INFO - Data type checking start...
+[ 2026-10-23 00:36:00,338 ] 104 src.logger - INFO - Data type checking Done!
+[ 2026-10-23 00:36:00,346 ] 107 src.logger - INFO - Checking Duplicate value : Found 58 duplicate value.
+[ 2026-10-23 00:36:00,361 ] 110 src.logger - INFO - Cheking null value : Found 0 null value.
+[ 2026-10-23 00:36:00,361 ] 119 src.logger - INFO - Splitting data into test_size=0.2, random_state=42
+[ 2026-10-23 00:36:00,375 ] 126 src.logger - INFO - Splitting done --> train_set:(5588, 13), test_set: (1397, 13)
+[ 2026-10-23 00:36:02,606 ] 187 src.logger - INFO - Starting training of all models...
+[ 2026-10-23 00:36:02,614 ] 82 src.logger - INFO - Training LogisticRegression..........
+[ 2026-10-23 00:36:02,614 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:36:11,863 ] 151 src.logger - INFO - logisticregression training completed. Test PR_AUC: 0.6062
+[ 2026-10-23 00:36:15,657 ] 82 src.logger - INFO - Training RandomForest..........
+[ 2026-10-23 00:36:15,657 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:36:24,680 ] 151 src.logger - INFO - randomforestclassifier training completed. Test PR_AUC: 0.6370
+[ 2026-10-23 00:36:28,680 ] 82 src.logger - INFO - Training XGBoost..........
+[ 2026-10-23 00:36:28,680 ] 87 src.logger - INFO - Preprocessing pipeline created successfully
+[ 2026-10-23 00:36:31,877 ] 151 src.logger - INFO - xgbclassifier training completed. Test PR_AUC: 0.6284
+[ 2026-10-23 00:37:14,321 ] 270 src.logger - INFO - Best model selected: name         randomforestclassifier
+recall                        0.909
+precision                     0.475
+threshold                     0.392
+Name: 1, dtype: object
+[ 2026-10-23 00:37:14,517 ] 318 src.logger - INFO - Model saved to models\randomforestclassifier_23-10-2026_00-36\randomforestclassifier_23-10-2026_00-36.pkl
+[ 2026-10-23 00:37:14,550 ] 352 src.logger - INFO - Reference profile saved to models\reference_profile.json
+[ 2026-10-23 00:37:14,551 ] 210 src.logger - INFO - Training completed. Best model: randomforestclassifier
+[ 2026-10-23 00:37:26,931 ] 104 src.logger - INFO - Model Loaded from mlflow: runs:/55540c19a0e54955b6025ed60ea126de/randomforestclassifier_model_23-10-2026_00-10
+[ 2026-10-23 00:37:26,965 ] 118 src.logger - INFO - Prediction started:       MonthlyCharges  tenure  Contract  ...     DeviceProtection      StreamingMovies PaperlessBilling
+3173           19.35      17  One year  ...  No internet service  No internet service               No
+
+[1 rows x 13 columns]

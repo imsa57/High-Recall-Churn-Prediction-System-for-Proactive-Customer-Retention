@@ -1,0 +1,28 @@
+{
+  "model_name": "randomforestclassifier",
+  "train_metrics": {
+    "accuracy": 0.7742,
+    "precision": 0.5491,
+    "recall": 0.811,
+    "f1": 0.6548,
+    "roc_auc": 0.8702,
+    "pr_auc": 0.6972
+  },
+  "test_metrics": {
+    "accuracy": 0.7602,
+    "precision": 0.5311,
+    "recall": 0.7859,
+    "f1": 0.6339,
+    "roc_auc": 0.8457,
+    "pr_auc": 0.637
+  },
+  "training_timestamp": "2026-10-23T00:36:24.680355",
+  "desiered_metrics": {
+    "name": "randomforestclassifier",
+    "recall": 0.909,
+    "precision": 0.475,
+    "threshold": 0.392
+  },
+  "mlflow_model_path": "runs:/c1cf7916e1364c38832de65dddb25da5/randomforestclassifier_model_23-10-2026_00-36",
+  "local_model_path": "models\\randomforestclassifier_23-10-2026_00-36\\randomforestclassifier_23-10-2026_00-36.pkl"
+}

@@ -1,0 +1,22 @@
+[ 2026-10-23 01:00:35,719 ] 32 src.logger - INFO - Starting Prediction API server.......
+[ 2026-10-23 01:00:35,815 ] 11 src.logger - INFO - Model found for predicton.
+[ 2026-10-23 01:00:57,451 ] 103 src.logger - INFO - Model Loaded from mlflow: runs:/55540c19a0e54955b6025ed60ea126de/randomforestclassifier_model_23-10-2026_00-10
+[ 2026-10-23 01:00:57,518 ] 122 src.logger - INFO - Prediction started:    MonthlyCharges  tenure        Contract     PaymentMethod SeniorCitizen  ... OnlineSecurity OnlineBackup DeviceProtection StreamingMovies PaperlessBilling
+0            20.0       2  Month-to-month  Electronic check             1  ...             No           No               No              No              Yes
+
+[1 rows x 13 columns]
+[ 2026-10-23 01:00:57,813 ] 74 src.logger - INFO - Buffered inference sample (buffer size: 1)
+[ 2026-10-23 01:01:12,375 ] 103 src.logger - INFO - Model Loaded from mlflow: runs:/55540c19a0e54955b6025ed60ea126de/randomforestclassifier_model_23-10-2026_00-10
+[ 2026-10-23 01:01:12,398 ] 122 src.logger - INFO - Prediction started:    MonthlyCharges  tenure        Contract     PaymentMethod SeniorCitizen  ... OnlineSecurity OnlineBackup DeviceProtection StreamingMovies PaperlessBilling
+0            20.0       2  Month-to-month  Electronic check             1  ...             No           No               No              No              Yes
+
+[1 rows x 13 columns]
+[ 2026-10-23 01:01:12,514 ] 74 src.logger - INFO - Buffered inference sample (buffer size: 2)
+[ 2026-10-23 01:16:56,418 ] 874 urllib3.connectionpool - WARNING - Retrying (Retry(total=6, connect=7, read=6, redirect=7, status=7)) after connection broken by 'ReadTimeoutError("HTTPConnectionPool(host='localhost', port=7006): Read timed out. (read timeout=120)")': /api/2.0/mlflow-artifacts/artifacts/4/55540c19a0e54955b6025ed60ea126de/artifacts/randomforestclassifier_model_23-10-2026_00-10
+[ 2026-10-23 01:17:03,877 ] 103 src.logger - INFO - Model Loaded from mlflow: runs:/55540c19a0e54955b6025ed60ea126de/randomforestclassifier_model_23-10-2026_00-10
+[ 2026-10-23 01:17:03,899 ] 122 src.logger - INFO - Prediction started:    MonthlyCharges  tenure        Contract     PaymentMethod SeniorCitizen  ... OnlineSecurity OnlineBackup DeviceProtection StreamingMovies PaperlessBilling
+0            20.0       2  Month-to-month  Electronic check             1  ...             No           No               No              No              Yes
+
+[1 rows x 13 columns]
+[ 2026-10-23 01:17:04,018 ] 74 src.logger - INFO - Buffered inference sample (buffer size: 3)
+[ 2026-10-23 01:17:10,265 ] 39 src.logger - INFO - Shutting down churn prediction service...

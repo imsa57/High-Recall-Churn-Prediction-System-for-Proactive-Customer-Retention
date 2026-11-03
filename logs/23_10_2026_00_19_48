@@ -1,0 +1,9 @@
+[ 2026-10-23 00:19:57,347 ] 27 src.logger - INFO - Starting Prediction API server.......
+[ 2026-10-23 00:19:57,349 ] 11 src.logger - INFO - Model found for predicton.
+[ 2026-10-23 00:22:37,437 ] 107 src.logger - ERROR - Best Model info not found
+[ 2026-10-23 00:22:37,498 ] 116 src.logger - INFO - Prediction started:    MonthlyCharges  tenure  ... StreamingMovies PaperlessBilling
+0            20.0       2  ...              No              Yes
+
+[1 rows x 13 columns]
+[ 2026-10-23 00:22:39,690 ] 55 src.logger - INFO - Buffered inference sample (buffer size: 1)
+[ 2026-10-23 00:26:08,527 ] 31 src.logger - INFO - Shutting down churn prediction service...
